@@ -13,7 +13,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.br.CPF;
-import org.springframework.format.annotation.DateTimeFormat;
+
 
 @Entity
 public class Cliente {
@@ -28,7 +28,7 @@ public class Cliente {
 	@NotBlank(message="Esse campo deve ser preenchido")
 	private String sobrenome;
 	
-	//@NotBlank(message="Esse campo deve ser preenchido")
+	@NotBlank(message="Esse campo deve ser preenchido")
 	@Past(message = "A data de nascimento deve estar no passado!")
 	private LocalDate datanascimento;
 	
